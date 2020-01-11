@@ -9,23 +9,37 @@ namespace Clinic.Models
 {
     class Doctor : Person
     {
-        private List<WorkDay> DoctorAvalibity = new List<WorkDay>();
-        
+        private List<WorkDay> DoctorAvailibity = new List<WorkDay>();
         public Doctor(string name, string surname, int[] pesel) : base(name, surname, pesel)
         {
-            DoctorAvalibity = GenerateDoctorAvalibity();
+            DoctorAvailibity = GenerateDoctorAvailibity();
         }
 
-        List<WorkDay> GenerateDoctorAvalibity()
+        List<WorkDay> GenerateDoctorAvailibity()
         {
             List<WorkDay> week = new List<WorkDay>();
 
             for(int i = 0; i < 5; i++)
             {
-                week[i] = new WorkDay();
+                week.Add(new WorkDay());
             }
 
             return week;
+        }
+
+        public List<WorkDay> GetDoctorAvailibity()
+        {
+            return DoctorAvailibity;
+        }
+
+        public void SetDoctorAvailibity(List<WorkDay> DoctorAvailibity)
+        {
+            this.DoctorAvailibity = DoctorAvailibity;
+        }
+
+        public WorkDay GetSignleWorkDay(int day)
+        {
+            return DoctorAvailibity[day];
         }
     }
 }

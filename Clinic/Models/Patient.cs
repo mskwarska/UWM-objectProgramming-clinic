@@ -15,5 +15,10 @@ namespace Clinic.Models
         {
             this.adress = adress;
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + adress;
+        }
     }
 }
