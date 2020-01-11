@@ -6,47 +6,19 @@ using System.Threading.Tasks;
 
 namespace Clinic.Models
 {
-    class Person
+    abstract class Person
     {
         //get i set  wielkimi
         private string name;
         private string surname;
         private int[] pesel= new int[11];
 
-        public string Name //WALIDATORY- SPRAWDZANIE PODANYCH WARTOSCI
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value;
-            }
-        }
+        public string Name { get => name; set => name = value; } 
+        //WALIDATORY- SPRAWDZANIE PODANYCH WARTOSCI
         
-        public string Surname
-        {
-            get
-            {
-                return surname;
-            }
-            set
-            {
-                surname = value;
-            }
-        }
-        public int[] PESEL
-        {
-            get
-            {
-                return pesel;
-            }
-            set
-            {
-                pesel = value;
-            }
-        }
+        public string Surname { get => surname; set => surname = value; }
+        
+        public int[] PESEL { get => pesel; set => pesel = value; }
 
         public Person(string name, string surname, int[] pesel)
         {

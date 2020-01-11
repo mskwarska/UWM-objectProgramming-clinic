@@ -8,7 +8,7 @@ namespace Clinic.Models
 {
     class WorkDay
     {
-        private bool[] day;
+        public bool[] day = new bool [8];
 
         public WorkDay()
         {
@@ -35,6 +35,11 @@ namespace Clinic.Models
             {
                 Console.WriteLine("BLEDNY PRZEZDIAL GODZIN!!!");
             }
+        }
+
+        public bool IsFreeHour(int hour)
+        {
+            return (day[hour] == true);
         }
     }
 }
