@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0114: Składowa ukrywa dziedziczoną składową; brak słowa kluczowego override
+dotnet_diagnostic.CS0114.severity = none
