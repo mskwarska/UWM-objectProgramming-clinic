@@ -10,7 +10,7 @@ namespace Clinic
     {
         static void Main(string[] args)
         {
-
+            //TestCommitPush
             //Jednorazowe wywolanie menu zwiazane z przychodnia
             //DisplayPrzychodniaMenu() -> void zlozony z Console.WriteLine(); 1. ... 2. 
             //Console read() z walidacja czy numer jest poprawny :) 
@@ -18,7 +18,7 @@ namespace Clinic
            while(true)
             {
                   //DisplayMainMenu();
-                  //GetVal();
+                  //GetVal(); 
             }
         }
     }
