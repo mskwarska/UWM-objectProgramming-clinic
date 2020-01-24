@@ -12,7 +12,7 @@ namespace Clinic.Models
 
         public WorkDay()
         {
-            for(int i = 0; i < 8; i++)
+            for(int i = 0; i < 8; i++)// 1 czy 0 ? 
             {
                 day[i] = true;
             }
@@ -34,6 +34,14 @@ namespace Clinic.Models
             else
             {
                 Console.WriteLine("BLEDNY PRZEZDIAL GODZIN!!!");
+            }
+        }
+
+        public void ChangeDayToBusy()
+        {
+            for(int i = 0; i < 8; i++)
+            {
+                ChangeHourToBusy(i);
             }
         }
 

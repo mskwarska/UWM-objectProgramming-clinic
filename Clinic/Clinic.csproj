@@ -46,6 +46,7 @@
     <Compile Include="Enums\CountryCode.cs" />
     <Compile Include="Enums\SpecjalizationEnum.cs" />
     <Compile Include="Enums\WeekEnum.cs" />
+    <Compile Include="Interfaces\IClinicService.cs" />
     <Compile Include="Models\Adress.cs" />
     <Compile Include="Models\Clinic.cs" />
     <Compile Include="Models\Doctor.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DoctorsService.cs" />
+    <Compile Include="Services\ClinicService.cs" />
     <Compile Include="Validates\AdressValidate.cs" />
   </ItemGroup>
   <ItemGroup>

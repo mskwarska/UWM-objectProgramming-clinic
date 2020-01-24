@@ -9,6 +9,9 @@ namespace Clinic.Models
     class Patient : Person
     {
         private Adress adress;
+        public List<Doctor> ListaZapisow = new List<Doctor>();
+        public List<int> ListaGodzinZapisow = new List<int>();
+        public List<int> ListaDniZapisow = new List<int>();
 
         public Adress Address { get; set; }
         public Patient(string name, string surname, int[] pesel, Adress adress) : base(name, surname, pesel)
@@ -18,7 +21,7 @@ namespace Clinic.Models
 
         public override string ToString()
         {
-            return base.ToString() + adress;
+            return base.ToString() + adress.ToString();
         }
     }
 }

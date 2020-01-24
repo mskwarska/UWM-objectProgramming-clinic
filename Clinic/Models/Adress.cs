@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Clinic.Enums;
 
 namespace Clinic.Models
 {
@@ -11,11 +12,10 @@ namespace Clinic.Models
         private string street;
         private string city;
         private Enum countryCode;
-        private int[] postalCode;
-
+        private string postalCode;
         private string Street { get => street; set => street = value; }
         private string City { get => city; set => city = value; }
-        public int[] PostalCode
+        public string PostalCode
         {
             get
             {
@@ -28,12 +28,21 @@ namespace Clinic.Models
         }
         private Enum CountryCode { get => countryCode; set => countryCode = value; }
 
-        public Adress(string street, string city, Enum countryCode, int[] postalCode)
+        public Adress(string street, string city, CountryCode countryCode, string postalCode)
         {
             this.street = street;
             this.city = city;
-            this.countryCode = countryCode;
+            this.CountryCode = countryCode;
             this.postalCode = postalCode;
+        }
+
+        public String ToString()
+        {
+            return " [MIASTO: " + city
+                + " ,ULICA: " + street
+                + " ,KOD PANSTWA: " + countryCode.ToString()
+                + " ,KOD POCZTOWY: " + postalCode
+                + "]";
         }
     }
 }

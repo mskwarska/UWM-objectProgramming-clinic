@@ -10,21 +10,19 @@ namespace Clinic.Models
     class Clinic
     {
         private List<Doctor> doctors;
-        private Queue<Patient> patients;
+        //private Queue<Patient> patients;
+        private List<Patient> patients;
 
         public Clinic()
         {
             doctors = new List<Doctor>(); 
-            patients = new Queue<Patient>();
+            patients = new List<Patient>();
         }
 
-        public void AddDoctor(Doctor doctor)
+        /*public void AddDoctor(Doctor doctor)
         {
             doctors.Add(doctor);
-        }
-        public void AddPatient(Patient patient)
-        {
-            patients.Enqueue(patient);
-        }
+        }*/
+        
     }
 }

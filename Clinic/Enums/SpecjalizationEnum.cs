@@ -10,6 +10,7 @@ namespace Clinic.Enums
     {
         Family,
         Laryngologist,
-        Cardiologist
+        Cardiologist,
+        ERR
     }
 }

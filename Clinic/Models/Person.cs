@@ -8,17 +8,17 @@ namespace Clinic.Models
 {
     abstract class Person
     {
-        //get i set  wielkimi
         private string name;
         private string surname;
-        private int[] pesel= new int[11];
+        private  int[] pesel = new int[11];
+
 
         public string Name { get => name; set => name = value; } 
         //WALIDATORY- SPRAWDZANIE PODANYCH WARTOSCI
         
         public string Surname { get => surname; set => surname = value; }
         
-        public int[] PESEL { get => pesel; set => pesel = value; }
+        public int[] PESEL { get => pesel; private set => pesel = value; }// private bo nie wolno edytować PESELU 
 
         public Person(string name, string surname, int[] pesel)
         {
@@ -29,7 +29,19 @@ namespace Clinic.Models
 
         public override string ToString()
         {
-            return String.Concat(name + surname, PESEL);
+            return "[IMIE: " + name
+                + " ,NAZWISKO: " + surname
+                + ", PESEL: " + PrintPesel();
+        }
+
+        private string PrintPesel()
+        {
+            string ps = "";
+            for(int i = 0; i < 10; i++)
+            {
+                ps +=  pesel[i].ToString();
+            }
+            return ps;
         }
     }
 }
