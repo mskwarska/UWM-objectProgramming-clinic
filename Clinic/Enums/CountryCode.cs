@@ -12,6 +12,7 @@ namespace Clinic.Enums
         IT,
         ENG,
         CA,
-        BR
+        BR,
+        ERR
     }
 }
